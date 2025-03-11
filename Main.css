@@ -1,0 +1,420 @@
+/* Global Styles - Vuexy Inspired */
+:root {
+    --primary: #7367f0;
+    --secondary: #82868b;
+    --success: #28c76f;
+    --danger: #ea5455;
+    --warning: #ff9f43;
+    --info: #00cfe8;
+    --light: #f8f8f8;
+    --dark: #4b4b4b;
+    --background: #f8f8f8;
+    --card-bg: #ffffff;
+    --border-color: #ebe9f1;
+    --shadow: 0 4px 24px 0 rgba(34, 41, 47, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: var(--background);
+    color: var(--dark);
+    line-height: 1.6;
+    font-size: 14px;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--card-bg);
+    color: var(--dark);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary);
+  }
+  
+  header ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  header ul li {
+    margin-left: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem 0;
+    font-weight: 500;
+  }
+  
+  header ul li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+  }
+  
+  header ul li:hover::after {
+    width: 100%;
+  }
+  
+  /* Main Content */
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  /* Upper Section with Form and Table */
+  #UpperSection {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Form Section */
+  #FormSection {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+  }
+  
+  #FormSection:hover {
+    transform: translateY(-5px);
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  form label {
+    font-weight: 500;
+    color: var(--secondary);
+    margin-bottom: 0.3rem;
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  form input {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.4rem;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    background-color: #f8f8f8;
+  }
+  
+  form input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(115, 103, 240, 0.2);
+    background-color: #fff;
+  }
+  
+  form input::placeholder {
+    color: #b9b9c3;
+  }
+  
+  form span {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  form button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+  }
+  
+  form button[type="reset"] {
+    background-color: #fff;
+    color: var(--secondary);
+    border: 1px solid var(--border-color);
+  }
+  
+  form button[title="Submit"] {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: 0 2px 8px rgba(115, 103, 240, 0.4);
+  }
+  
+  form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(115, 103, 240, 0.3);
+  }
+  
+  form button[type="reset"]:hover {
+    background-color: var(--light);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Section */
+  #TableSection {
+    background-color: var(--card-bg);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  
+  #TableSection:hover {
+    transform: translateY(-5px);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #f9fafc;
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  th {
+    font-weight: 600;
+    color: var(--secondary);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+  
+  tbody tr {
+    transition: var(--transition);
+  }
+  tbody tr img 
+  {
+    height: 50px;
+    object-fit: cover;
+  }
+  
+  tbody tr td button {
+    background-color:black;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.11s;
+  }
+  
+  tbody tr td button:active {
+    background-color:rgb(19, 18, 18);
+    transform: scale(0.95);
+
+  }
+  
+  
+  tbody tr:hover {
+    cursor: pointer;
+    user-select: none;
+    background-color: #d1d9ea;
+    transform: scale(1.01);
+  }
+  tbody tr:active {
+    transform: scale(1);
+  }
+  
+  /* Show Data Section (Card Detail) */
+  #ShowDataSection {
+    margin-top: 2rem;
+    background-color: var(--card-bg);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+  
+  #ShowDataSection:hover {
+    transform: translateY(-5px);
+  }
+  
+  .Card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+  }
+  
+  .Card span {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    background-color: #f8f8f8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--secondary);
+  }
+  
+  .Card span:hover {
+    background-color: var(--danger);
+    color: white;
+    transform: rotate(90deg);
+  }
+  
+  .Card img {
+    max-width: 240px;
+    height: auto;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 24px rgba(34, 41, 47, 0.1);
+    transition: var(--transition);
+  }
+  
+  .Card img:hover {
+    transform: scale(1.05);
+  }
+  
+  .Card h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+    font-weight: 600;
+  }
+  
+  .Card h4 {
+    font-size: 1.1rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .Card p {
+    font-size: 1rem;
+    color: var(--secondary);
+    text-align: center;
+    max-width: 600px;
+    line-height: 1.8;
+  }
+  
+  /* Table Action Buttons */
+  .action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 0.8rem;
+  }
+  
+  .update-btn {
+    background-color: rgba(115, 103, 240, 0.1);
+    color: var(--primary);
+  }
+  
+  .update-btn:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: rgba(234, 84, 85, 0.1);
+    color: var(--danger);
+  }
+  
+  .delete-btn:hover {
+    background-color: var(--danger);
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 900px) {
+    #UpperSection {
+      grid-template-columns: 1fr;
+    }
+    
+    #FormSection, #TableSection, #ShowDataSection {
+      transform: none !important;
+    }
+  }
+  
+  /* Table Responsive */
+  @media (max-width: 768px) {
+    th, td {
+      padding: 0.75rem;
+      font-size: 0.85rem;
+    }
+    
+    .Card {
+      padding: 1.5rem;
+    }
+    
+    .Card h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #c9c9c9;
+    border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  #UpperSection, #ShowDataSection {
+    animation: fadeIn 0.6s ease-out;
+  }

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Store</title>
+    <link rel="stylesheet" href="./Main.css">
+</head>
+<body>
+    
+  <header>
+    <h2>Music Store</h2>
+    <ul>
+        <li>ABC</li>
+        <li>More</li>
+    </ul>
+  </header>
+
+  <main>
+
+
+   <section id="UpperSection">
+
+    <div id="FormSection">
+        <form>
+            <label>Type The Instrument ID: </label>
+            <input type="text" placeholder="Id:">
+
+           
+            <label>Type The Brand Of Instrument: </label>
+            <input type="text" placeholder="Brand Name: ">
+
+            <label>Type The Name Of Instrument: </label>
+            <input type="text" placeholder="Name: ">
+
+            <label>Type The Poster Of Instrument: </label>
+            <input type="text" placeholder="Poster Url: ">
+
+            <label>Type The Price Of Instrument: </label>
+            <input type="number" placeholder="Name: ">
+
+            <span>
+                <button type="reset">Reset</button>
+                <button title="Submit">Submit</button>
+            </span>
+
+
+        </form>
+    </div>
+
+    <div id="TableSection">
+        <table>
+          <thead>
+            <tr>
+                <th>Id</th>
+                <th>Brand</th>
+                <th>Name</th>
+                <th>Preview</th>
+                <th>Price</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+          </thead>
+
+          <tbody id = "TBody">
+
+            <tr>
+                <td>101</td>
+                <td>Yamaha</td>
+                <td>Guitar F310</td>
+                <td><img src="https://m.media-amazon.com/images/I/51F8CzLvL2L.jpg" alt=""></td>
+                <td>9500</td>
+                <td><button>Update</button></td>
+                <td><button>Delete</button></td>
+        
+            </tr>
+
+          </tbody>
+            
+        </table>
+    </div>
+
+
+
+
+
+
+   </section>
+
+
+   <div id="ShowDataSection">
+    <!-- Sjow The Data In Full Page -->
+
+        <div class="Card">
+            <span>X</span>
+            <img src="https://m.media-amazon.com/images/I/51F8CzLvL2L.jpg" alt="">
+            <h2>Gyitar F310</h2>
+            <h4>Yamaha</h4>
+            <p>10999</p>
+        </div>
+
+   </div>
+
+
+
+
+  </main>
+    
+</body>
+</html>
