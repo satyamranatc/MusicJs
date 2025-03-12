@@ -22,7 +22,7 @@
    <section id="UpperSection">
 
     <div id="FormSection">
-        <form>
+        <form id = "MyForm">
             <label>Type The Instrument ID: </label>
             <input type="text" placeholder="Id:">
 
@@ -37,7 +37,7 @@
             <input type="text" placeholder="Poster Url: ">
 
             <label>Type The Price Of Instrument: </label>
-            <input type="number" placeholder="Name: ">
+            <input type="number" placeholder="Price: ">
 
             <span>
                 <button type="reset">Reset</button>
@@ -59,22 +59,11 @@
                 <th>Price</th>
                 <th>Update</th>
                 <th>Delete</th>
+                <th>View Details</th>
             </tr>
           </thead>
 
           <tbody id = "TBody">
-
-            <tr>
-                <td>101</td>
-                <td>Yamaha</td>
-                <td>Guitar F310</td>
-                <td><img src="https://m.media-amazon.com/images/I/51F8CzLvL2L.jpg" alt=""></td>
-                <td>9500</td>
-                <td><button>Update</button></td>
-                <td><button>Delete</button></td>
-        
-            </tr>
-
           </tbody>
             
         </table>
@@ -91,13 +80,7 @@
    <div id="ShowDataSection">
     <!-- Sjow The Data In Full Page -->
 
-        <div class="Card">
-            <span>X</span>
-            <img src="https://m.media-amazon.com/images/I/51F8CzLvL2L.jpg" alt="">
-            <h2>Gyitar F310</h2>
-            <h4>Yamaha</h4>
-            <p>10999</p>
-        </div>
+       
 
    </div>
 
@@ -107,4 +90,5 @@
   </main>
     
 </body>
+<script src="./Main.js"></script>
 </html>
